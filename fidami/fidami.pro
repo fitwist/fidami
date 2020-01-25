@@ -1,14 +1,15 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-01-25T07:43:12
+# Project created by QtCreator 2018-12-02T15:42:15
 #
 #-------------------------------------------------
 
 QT       += core gui
+QT += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = fidami
+TARGET = Fidami
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,10 +27,10 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
 
 FORMS += \
         mainwindow.ui
