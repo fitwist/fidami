@@ -18,7 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTextStream ts(&plot_data);
 
-    if (QFile::exists("/Users/helenkapatsa/Repositories/fidami/fidami/dataset/line-line.csv") &&
+    //qApp->applicationDirPath() + "/db.sqlite"
+    if (QFile::exists(qApp->applicationDirPath() + "line-line.csv") &&
         QFile::exists("/Users/helenkapatsa/Repositories/fidami/fidami/dataset/area-area.csv") &&
         QFile::exists("/Users/helenkapatsa/Repositories/fidami/fidami/dataset/bar-bar.csv")) {
         ui->statusBar->showMessage(tr("Файлы успешно импортированы"));
@@ -50,7 +51,7 @@ void MainWindow::showLineChart()
     QString data;
     QStringList coordinateList;
 
-    plot_data.setFileName("/Users/helenkapatsa/Repositories/fidami/fidami/dataset/line-line.csv");
+    plot_data.setFileName("/home/user/gitdir/Lena/fidami/fidami/dataset/line-line.csv");
     plot_data.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream ts(&plot_data);
@@ -149,7 +150,7 @@ void MainWindow::showBarChart()
     QString data;
     QStringList coordinateList;
 
-    plot_data.setFileName("/Users/helenkapatsa/Repositories/fidami/fidami/dataset/bar-bar.csv");
+    plot_data.setFileName("/home/user/gitdir/Lena/fidami/fidami/dataset/bar-bar.csv");
     plot_data.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream ts(&plot_data);
